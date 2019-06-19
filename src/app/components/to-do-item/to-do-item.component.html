@@ -1,0 +1,8 @@
+<div [ngClass]="setClasses()" (click)="setSelectedToDo(todo)">
+    <input (change)="toggle(todo)" type="checkbox">
+    <input class="my-input" placeholder="Title" value="{{todo.title}}" type="text">
+    <input class="my-input" placeholder="Category" value="{{todo.category}}" type="text">
+    <input class="my-input" placeholder="Description" value="{{todo.Description}}" type="text">
+    <input class="my-input" placeholder="Due Date" value="{{todo.dueDate}}" type="text">
+    <button (click)="deleteToDo(todo)" class="del">x</button>    
+</div>

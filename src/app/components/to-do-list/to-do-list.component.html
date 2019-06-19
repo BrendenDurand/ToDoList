@@ -1,0 +1,18 @@
+<div>
+    <button (click)="AddToDo()">Add New</button>
+    <input class="input-ToDo" type="text" placeholder="Add your task here" [(ngModel)]="searchText">  
+    <button (click)="searchTitle()">Search Title</button>
+    <button (click)="searchCategory()">Search Category</button>
+    <button (click)="clearSearch()">Clear Search</button>
+    <app-to-do-item 
+        *ngFor="let todo of todos"
+        [todo]="todo"
+        (deleteAToDo)="deleteAToDo($event)"
+        (setTheSelected)="setTheSelected($event)"
+        >
+    </app-to-do-item>
+
+</div>
+
+
+
